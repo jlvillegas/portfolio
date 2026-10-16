@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jorge Luis Villegas Oliva | Portfolio</title>
+<meta name="description" content="Analista en Sistemas en Merlo, San Luis. Desarrollo sistemas web en producción, sitios para negocios y la infraestructura que los sostiene. Me especializo en cloud e IA sobre Microsoft Azure.">
+<meta name="author" content="Jorge Luis Villegas Oliva">
+<link rel="canonical" href="https://jlvillegas.github.io/portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="Jorge Luis Villegas Oliva | Portfolio">
+<meta property="og:description" content="Sistemas web en producción, sitios para negocios y redes. Cloud e IA sobre Microsoft Azure.">
+<meta property="og:url" content="https://jlvillegas.github.io/portfolio/">
+<meta property="og:image" content="https://jlvillegas.github.io/portfolio/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f3f5f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1615" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Schibsted+Grotesk:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>
+  // Aplica el tema elegido antes de pintar, para que no parpadee.
+  try { var t = localStorage.getItem("tema"); if (t === "claro" || t === "oscuro") document.documentElement.setAttribute("data-theme", t === "claro" ? "light" : "dark"); } catch (e) {}
+</script>
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="barra">
+  <div class="ancho barra-in">
+    <a class="marca" href="#inicio" aria-label="Jorge Luis Villegas Oliva, inicio">
+      <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="8" class="marca-fondo"/><path d="M10 9v10.5a3.5 3.5 0 0 1-6 2.4" class="marca-trazo" transform="translate(4 0)"/><path d="M17 9l4.5 14L26 9" class="marca-trazo"/></svg>
+      <span>Jorge Luis Villegas Oliva</span>
+    </a>
+    <nav aria-label="Secciones">
+      <ul class="menu">
+        <li><a href="#sistema">Sistema</a></li>
+        <li><a href="#sitios">Sitios</a></li>
+        <li><a href="#ia">IA</a></li>
+        <li><a href="#redes">Redes</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <button class="tema" type="button" id="tema" aria-label="Cambiar entre tema claro y oscuro">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <section class="hero ancho" id="inicio" aria-labelledby="titulo">
+    <div class="hero-texto">
+      <p class="lugar">Analista en Sistemas en Merlo, San Luis, Argentina</p>
+      <h1 id="titulo">Software, sitios y redes para negocios reales.</h1>
+      <p class="bajada">Desarrollo sistemas web que se usan todos los días, sitios para comercios y la infraestructura que los sostiene: servidores, redes y nube. Hoy me estoy especializando en cloud e inteligencia artificial sobre Microsoft Azure.</p>
+      <div class="acciones">
+        <a class="boton primario" href="#sistema">Ver proyectos</a>
+        <a class="boton" href="https://www.linkedin.com/in/jorge-luis-villegas-oliva-212704125/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="boton" href="https://github.com/jlvillegas" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p class="disponible"><span class="punto" aria-hidden="true"></span>Disponible para trabajo remoto</p>
+    </div>
+
+    <aside class="tablero" aria-labelledby="tablero-titulo">
+      <div class="tablero-cabeza">
+        <h2 id="tablero-titulo">Lo que tengo funcionando</h2>
+        <p id="tablero-estado" class="tablero-nota">Comprobando los sitios…</p>
+      </div>
+      <ul class="servicios">
+        <li class="servicio">
+          <span class="led" data-estado="ok" aria-hidden="true"></span>
+          <span class="servicio-nombre">Sistema de gestión de la Clínica Villegas</span>
+          <span class="servicio-dato">servidor propio, acceso con Google</span>
+          <span class="servicio-estado">En producción</span>
+        </li>
+        <li class="servicio" data-url="https://villegasinsumos.com/">
+          <span class="led" aria-hidden="true"></span>
+          <span class="servicio-nombre">Tienda online Villegas Insumos</span>
+          <a class="servicio-dato" href="https://villegasinsumos.com/" target="_blank" rel="noopener">villegasinsumos.com</a>
+          <span class="servicio-estado">Publicado</span>
+        </li>
+        <li class="servicio" data-url="https://villegascentromedicoodontologico.com/">
+          <span class="led" aria-hidden="true"></span>
+          <span class="servicio-nombre">Sitio de la Clínica Villegas</span>
+          <a class="servicio-dato" href="https://villegascentromedicoodontologico.com/" target="_blank" rel="noopener">villegascentromedicoodontologico.com</a>
+          <span class="servicio-estado">Publicado</span>
+        </li>
+        <li class="servicio" data-url="https://odontologa-alejandravillegas.netlify.app/">
+          <span class="led" aria-hidden="true"></span>
+          <span class="servicio-nombre">Marca personal de una odontóloga</span>
+          <a class="servicio-dato" href="https://odontologa-alejandravillegas.netlify.app/" target="_blank" rel="noopener">odontologa-alejandravillegas.netlify.app</a>
+          <span class="servicio-estado">Publicado</span>
+        </li>
+        <li class="servicio" data-url="https://franciscus-merlo-san-luis.netlify.app/">
+          <span class="led" aria-hidden="true"></span>
+          <span class="servicio-nombre">Residencia Franciscus</span>
+          <a class="servicio-dato" href="https://franciscus-merlo-san-luis.netlify.app/" target="_blank" rel="noopener">franciscus-merlo-san-luis.netlify.app</a>
+          <span class="servicio-estado">Publicado</span>
+        </li>
+        <li class="servicio">
+          <span class="led" data-estado="ok" aria-hidden="true"></span>
+          <span class="servicio-nombre">AI Lead Qualifier</span>
+          <a class="servicio-dato" href="https://github.com/jlvillegas/ai-lead-qualifier" target="_blank" rel="noopener">github.com/jlvillegas/ai-lead-qualifier</a>
+          <span class="servicio-estado">Código abierto</span>
+        </li>
+      </ul>
+    </aside>
+  </section>
+
+  <section class="seccion destacado" id="sistema" aria-labelledby="sistema-titulo">
+    <div class="ancho">
+      <div class="cabeza-seccion">
+        <p class="etiqueta">Proyecto principal, en producción desde 2026</p>
+        <h2 id="sistema-titulo">Sistema de gestión de la Clínica Villegas</h2>
+      </div>
+
+      <div class="dos-columnas">
+        <div class="texto-largo">
+          <p class="lead">Reemplaza el software anterior, las planillas y el papel de una clínica odontológica de Villa de Merlo con más de 30 años. Lo usan todos los días cinco profesionales, la recepción y la administración, cada uno con su propio acceso.</p>
+          <h3>Mi parte</h3>
+          <p>Relevé cómo trabaja cada persona de la clínica, decido qué se construye y en qué orden, lo publico y le doy soporte. El código lo escribo con asistentes de IA (Claude y Codex) sobre un mismo repositorio de GitHub, con 53 grupos de pruebas automáticas y un registro del estado del proyecto que cada asistente lee antes de empezar.</p>
+          <h3>Dónde corre</h3>
+          <p>En Docker Compose (web, API y base de datos) sobre un servidor de DigitalOcean, publicado con Cloudflare. Cada cambio que llega a la rama principal de GitHub se instala solo. Antes corría en una mini PC de la clínica, que hoy queda de respaldo.</p>
+          <p class="nota-codigo">El código es privado porque también ofrezco el sistema a otros consultorios. En una entrevista puedo mostrar la demo con datos inventados.</p>
+        </div>
+
+        <dl class="funciones">
+          <div><dt>Agenda y turnos</dt><dd>Agenda por profesional con lugares libres del día y del mes. Los pacientes piden turno desde un link y confirman o cancelan con un toque.</dd></div>
+          <div><dt>Historia clínica</dt><dd>Odontograma con dos vistas, radiografías con visor y comparador antes y después, presupuestos y lo que debe cada paciente.</dd></div>
+          <div><dt>Cobros y caja</dt><dd>Cobro con QR de Mercado Pago que entra solo a la caja por webhook y avisa a recepción quién pagó. Caja diaria, gastos, liquidaciones y reportes.</dd></div>
+          <div><dt>Sala de espera</dt><dd>La TV llama por los últimos tres números del DNI con una voz neuronal que genera el propio servidor, y ordena los llamados para que no se pisen.</dd></div>
+          <div><dt>IA en el consultorio</dt><dd>El odontólogo dicta en la tablet lo que hizo y Claude lo ordena en prestaciones, piezas y caras. También lee fichas en papel escaneadas y marca lo dudoso para revisar.</dd></div>
+          <div><dt>Accesos por rol</dt><dd>Ingreso con Google. Recepción, profesionales, cuentas y administración ven sólo lo que les toca.</dd></div>
+          <div><dt>Demo para otros consultorios</dt><dd>El mismo sistema arranca en modo demo, con datos inventados y adaptado a otro rubro, para mostrarlo a otros profesionales.</dd></div>
+        </dl>
+      </div>
+
+      <figure class="diagrama">
+        <div class="diagrama-scroll" tabindex="0" role="region" aria-label="Diagrama de arquitectura, se puede desplazar horizontalmente">
+          <svg viewBox="0 0 980 470" role="img" aria-labelledby="diag-t diag-d">
+            <title id="diag-t">Arquitectura del sistema de gestión</title>
+            <desc id="diag-d">Recepción, consultorios, la sala de espera y los pacientes entran por Cloudflare a un servidor de DigitalOcean con tres contenedores: la web en React, la API en Node.js y PostgreSQL. La API se conecta con Mercado Pago, Google y la API de Claude. Cada cambio en GitHub se instala solo en el servidor.</desc>
+            <defs>
+              <marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="d-punta"/></marker>
+            </defs>
+
+            <text x="20" y="28" class="d-titulo">Quién lo usa</text>
+            <g class="d-nodo"><rect x="20" y="44" width="200" height="58" rx="10"/><text x="36" y="69" class="d-nombre">Recepción</text><text x="36" y="89" class="d-detalle">PC: agenda, cobros, caja</text></g>
+            <g class="d-nodo"><rect x="20" y="118" width="200" height="58" rx="10"/><text x="36" y="143" class="d-nombre">Consultorios</text><text x="36" y="163" class="d-detalle">Tablet y PC, dictado por voz</text></g>
+            <g class="d-nodo"><rect x="20" y="192" width="200" height="58" rx="10"/><text x="36" y="217" class="d-nombre">Sala de espera</text><text x="36" y="237" class="d-detalle">TV con voz y tótem</text></g>
+            <g class="d-nodo"><rect x="20" y="266" width="200" height="58" rx="10"/><text x="36" y="291" class="d-nombre">Pacientes</text><text x="36" y="311" class="d-detalle">Link para pedir turno</text></g>
+
+            <g class="d-nodo d-borde"><rect x="270" y="155" width="130" height="58" rx="10"/><text x="286" y="180" class="d-nombre">Cloudflare</text><text x="286" y="200" class="d-detalle">HTTPS</text></g>
+            <path d="M220 73 C 245 73, 245 184, 268 184" class="d-linea" marker-end="url(#flecha)"/>
+            <path d="M220 147 C 245 147, 245 184, 268 184" class="d-linea"/>
+            <path d="M220 221 C 245 221, 245 184, 268 184" class="d-linea"/>
+            <path d="M220 295 C 245 295, 245 184, 268 184" class="d-linea"/>
+
+            <rect x="440" y="16" width="270" height="350" rx="16" class="d-grupo"/>
+            <text x="460" y="44" class="d-titulo">Servidor en DigitalOcean</text>
+            <text x="460" y="63" class="d-detalle">Docker Compose</text>
+            <g class="d-nodo d-acento"><rect x="460" y="80" width="230" height="64" rx="10"/><text x="476" y="106" class="d-nombre">Web</text><text x="476" y="127" class="d-detalle">React 19, Vite y Tailwind CSS</text></g>
+            <g class="d-nodo d-acento"><rect x="460" y="176" width="230" height="74" rx="10"/><text x="476" y="202" class="d-nombre">API</text><text x="476" y="222" class="d-detalle">Node.js, sin framework</text><text x="476" y="240" class="d-detalle">Voz de la TV con Piper</text></g>
+            <g class="d-nodo d-acento"><rect x="460" y="282" width="230" height="64" rx="10"/><text x="476" y="308" class="d-nombre">PostgreSQL 17</text><text x="476" y="329" class="d-detalle">Datos, fotos y radiografías</text></g>
+            <path d="M400 184 C 425 184, 430 112, 458 112" class="d-linea" marker-end="url(#flecha)"/>
+            <path d="M575 144 L 575 174" class="d-linea" marker-end="url(#flecha)"/>
+            <path d="M575 250 L 575 280" class="d-linea" marker-end="url(#flecha)"/>
+
+            <text x="760" y="28" class="d-titulo">Servicios externos</text>
+            <g class="d-nodo"><rect x="760" y="44" width="200" height="58" rx="10"/><text x="776" y="69" class="d-nombre">Mercado Pago</text><text x="776" y="89" class="d-detalle">QR y webhooks</text></g>
+            <g class="d-nodo"><rect x="760" y="134" width="200" height="58" rx="10"/><text x="776" y="159" class="d-nombre">Google</text><text x="776" y="179" class="d-detalle">Inicio de sesión</text></g>
+            <g class="d-nodo"><rect x="760" y="224" width="200" height="58" rx="10"/><text x="776" y="249" class="d-nombre">API de Claude</text><text x="776" y="269" class="d-detalle">Dictado y lectura de fichas</text></g>
+            <path d="M690 205 C 725 205, 725 73, 758 73" class="d-linea" marker-end="url(#flecha)" marker-start="url(#flecha)"/>
+            <path d="M690 213 C 725 213, 725 163, 758 163" class="d-linea" marker-end="url(#flecha)"/>
+            <path d="M690 221 C 725 221, 725 253, 758 253" class="d-linea" marker-end="url(#flecha)"/>
+
+            <g class="d-nodo d-borde"><rect x="460" y="398" width="230" height="58" rx="10"/><text x="476" y="423" class="d-nombre">GitHub</text><text x="476" y="443" class="d-detalle">Cada cambio se instala solo</text></g>
+            <path d="M575 398 L 575 370" class="d-linea d-punteada" marker-end="url(#flecha)"/>
+          </svg>
+        </div>
+        <figcaption>Cómo está armado. Las flechas muestran quién le habla a quién; Mercado Pago también le avisa a la API cuando entra un pago.</figcaption>
+      </figure>
+
+      <ul class="pilas" aria-label="Tecnologías del sistema">
+        <li>React 19</li><li>Vite</li><li>Tailwind CSS 4</li><li>TypeScript</li><li>Node.js</li><li>PostgreSQL 17</li><li>Docker Compose</li><li>DigitalOcean</li><li>Cloudflare</li><li>Mercado Pago</li><li>Google OAuth</li><li>API de Claude</li><li>Piper TTS</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion" id="sitios" aria-labelledby="sitios-titulo">
+    <div class="ancho">
+      <div class="cabeza-seccion">
+        <h2 id="sitios-titulo">Sitios web</h2>
+        <p class="intro">Sitios publicados en Netlify para negocios de la zona. Todos están pensados para que el cliente reciba consultas y pedidos por WhatsApp.</p>
+      </div>
+      <div class="galeria">
+        <article class="sitio">
+          <a class="ventana" href="https://villegasinsumos.com/" target="_blank" rel="noopener" aria-label="Abrir villegasinsumos.com">
+            <span class="ventana-barra" aria-hidden="true"><i></i><i></i><i></i><span>villegasinsumos.com</span></span>
+            <img src="img/villegasinsumos.jpg" width="1280" height="614" loading="lazy" alt="Portada de la tienda Villegas Insumos con el buscador de productos y una foto del local.">
+          </a>
+          <h3>Tienda online de Villegas Insumos</h3>
+          <p>Catálogo de más de 200 productos odontológicos y médicos con variantes, búsqueda y categorías. El carrito arma el pedido y lo envía por WhatsApp. El sitio muestra si el local está abierto y tiene modo oscuro.</p>
+        </article>
+        <article class="sitio">
+          <a class="ventana" href="https://villegascentromedicoodontologico.com/" target="_blank" rel="noopener" aria-label="Abrir el sitio de la Clínica Villegas">
+            <span class="ventana-barra" aria-hidden="true"><i></i><i></i><i></i><span>villegascentromedicoodontologico.com</span></span>
+            <img src="img/clinica-villegas-web.jpg" width="1280" height="614" loading="lazy" alt="Portada del sitio de la Clínica Villegas con los botones para pedir turno y urgencias.">
+          </a>
+          <h3>Sitio de la Clínica Villegas</h3>
+          <p>Turnos y urgencias por WhatsApp, equipo, servicios y opiniones de Google. Comparte la identidad visual con el sistema de gestión.</p>
+        </article>
+        <article class="sitio">
+          <a class="ventana" href="https://odontologa-alejandravillegas.netlify.app/" target="_blank" rel="noopener" aria-label="Abrir el sitio de la odontóloga Alejandra Villegas">
+            <span class="ventana-barra" aria-hidden="true"><i></i><i></i><i></i><span>odontologa-alejandravillegas.netlify.app</span></span>
+            <img src="img/alejandra-villegas.jpg" width="1280" height="614" loading="lazy" alt="Portada del sitio de la odontóloga Alejandra Villegas con su logo y una foto atendiendo.">
+          </a>
+          <h3>Marca personal de una odontóloga</h3>
+          <p>Odontología y armonización orofacial: tratamientos, enfoque profesional y contacto, con una identidad propia distinta de la clínica.</p>
+        </article>
+        <article class="sitio">
+          <a class="ventana" href="https://franciscus-merlo-san-luis.netlify.app/" target="_blank" rel="noopener" aria-label="Abrir el sitio de la Residencia Franciscus">
+            <span class="ventana-barra" aria-hidden="true"><i></i><i></i><i></i><span>franciscus-merlo-san-luis.netlify.app</span></span>
+            <img src="img/franciscus.jpg" width="1280" height="614" loading="lazy" alt="Portada del sitio de la Residencia Franciscus con una foto de la casa entre pinos.">
+          </a>
+          <h3>Residencia Franciscus</h3>
+          <p>Modalidades de residencia, servicios, galería y consultas por WhatsApp para una residencia de personas mayores en Merlo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="ia" aria-labelledby="ia-titulo">
+    <div class="ancho dos-columnas">
+      <div class="texto-largo">
+        <div class="cabeza-seccion">
+          <h2 id="ia-titulo">Automatización e IA</h2>
+        </div>
+        <h3>AI Lead Qualifier</h3>
+        <p>Un flujo en n8n que recibe consultas de un formulario, las califica con Gemini y avisa al equipo cuando una es prioritaria. Nadie copia datos a mano y ningún contacto se pierde.</p>
+        <ol class="pasos">
+          <li>Un formulario recibe nombre, email, empresa, mensaje y presupuesto.</li>
+          <li>Un paso en JavaScript valida y normaliza los datos. Lo inválido se descarta antes de gastar llamadas a la IA.</li>
+          <li>Gemini devuelve un JSON con el tipo de servicio, la prioridad, un resumen y la próxima acción.</li>
+          <li>Se guarda una fila en Google Sheets. Si la IA falla, el contacto se guarda igual, marcado para revisar.</li>
+          <li>Los de prioridad alta generan un aviso por Gmail.</li>
+        </ol>
+        <p class="enlaces">
+          <a href="https://github.com/jlvillegas/ai-lead-qualifier" target="_blank" rel="noopener">Ver el código en GitHub</a>
+          <a href="https://drive.google.com/file/d/1Rp-oSschvamBtgvrJnry9fyRAJbjJPcp/view" target="_blank" rel="noopener">Ver el video de 50 segundos</a>
+        </p>
+        <ul class="pilas" aria-label="Tecnologías del flujo"><li>n8n</li><li>Gemini API</li><li>Google Sheets</li><li>Gmail</li><li>JavaScript</li></ul>
+      </div>
+      <div class="texto-largo recuadro">
+        <h3>IA dentro del sistema de la clínica</h3>
+        <ul class="lista">
+          <li><strong>Dictado clínico.</strong> El odontólogo aprieta el micrófono en la tablet, dice lo que hizo y Claude lo ordena en prestaciones, piezas, caras y próximo turno. No se guarda nada sin que lo revise.</li>
+          <li><strong>Fichas en papel.</strong> Recepción sube el PDF del escáner y Claude lee cada ficha, la une con el paciente del sistema y marca lo dudoso para corroborar.</li>
+          <li><strong>Asistente del tótem.</strong> Responde preguntas de los pacientes en la sala de espera.</li>
+        </ul>
+        <h3>Cómo uso la IA para programar</h3>
+        <p>Trabajo con Claude y Codex sobre el mismo repositorio. GitHub es la memoria compartida: cada asistente lee el estado del proyecto antes de empezar, corre las pruebas y deja el cambio registrado. Yo defino qué se hace, reviso el resultado en pantalla y lo pruebo con el equipo de la clínica.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="redes" aria-labelledby="redes-titulo">
+    <div class="ancho dos-columnas">
+      <div class="texto-largo">
+        <div class="cabeza-seccion">
+          <h2 id="redes-titulo">Redes e infraestructura</h2>
+        </div>
+        <p class="lead">Con Villegas Insumos Tecnológicos instalo enlaces Starlink, redes Wi-Fi mesh y access points, cámaras IP y alarmas para casas, cabañas y comercios.</p>
+        <ul class="lista">
+          <li>Diseño de una red Wi-Fi 6 para un complejo de diez cabañas, con dos Starlink Mini, access points de exterior y routers mesh.</li>
+          <li>Equipos TP-Link Deco y Omada, cámaras Hikvision, Dahua y Ezviz, cerraduras inteligentes y lectores de huella.</li>
+          <li>Alquiler de Starlink para eventos.</li>
+          <li>Presupuestos que separan equipos, cableado, mano de obra y abono mensual, para que el cliente sepa qué paga.</li>
+        </ul>
+      </div>
+      <div class="texto-largo">
+        <h3>Servidores</h3>
+        <p>Llevé el sistema de la clínica de una mini PC local a un servidor en DigitalOcean, con actualización automática desde GitHub y copias de seguridad de la base. Ahora estoy armando un panel con Uptime Kuma para saber al instante si algún sistema se cae.</p>
+        <h3>También</h3>
+        <p>Odontología digital en la clínica: escaneo intraoral e impresión 3D en resina de modelos y guías quirúrgicas, con Chitubox, Meshmixer, Blue Sky Plan y Exocad.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="experiencia" aria-labelledby="experiencia-titulo">
+    <div class="ancho dos-columnas">
+      <div>
+        <div class="cabeza-seccion">
+          <h2 id="experiencia-titulo">Experiencia</h2>
+        </div>
+        <ol class="linea-tiempo">
+          <li>
+            <p class="periodo">2023 a hoy</p>
+            <h3>Fundador y técnico en conectividad y seguridad</h3>
+            <p class="lugar-trabajo">Villegas Insumos Tecnológicos, por cuenta propia</p>
+            <p>Instalaciones de Starlink, redes Wi-Fi, cámaras y alarmas.</p>
+          </li>
+          <li>
+            <p class="periodo">2015 a hoy</p>
+            <h3>Responsable de sistemas y tecnología</h3>
+            <p class="lugar-trabajo">Clínica Villegas, Merlo, San Luis</p>
+            <p>Sistema de gestión propio, servidores, red, cámaras y flujos de odontología digital.</p>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <div class="cabeza-seccion">
+          <h2>Formación</h2>
+        </div>
+        <ol class="linea-tiempo">
+          <li>
+            <p class="periodo">2024 a 2027</p>
+            <h3>Licenciatura en Informática</h3>
+            <p class="lugar-trabajo">Universidad Siglo 21, en curso</p>
+            <p>Título intermedio obtenido: Analista Universitario en Sistemas de Computación.</p>
+          </li>
+          <li>
+            <p class="periodo">En preparación</p>
+            <h3>Microsoft Azure</h3>
+            <p>Azure Fundamentals (AZ-900) y Azure AI Fundamentals (AI-901).</p>
+          </li>
+          <li>
+            <p class="periodo">Cursando</p>
+            <h3>Foundations of UX and UI Design</h3>
+            <p>Para que los sistemas que hago sean más fáciles de usar.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="aptitudes" aria-labelledby="aptitudes-titulo">
+    <div class="ancho">
+      <div class="cabeza-seccion">
+        <h2 id="aptitudes-titulo">Con qué trabajo</h2>
+      </div>
+      <div class="aptitudes">
+        <div><h3>Desarrollo web</h3><ul><li>React</li><li>TypeScript y JavaScript</li><li>Node.js</li><li>PostgreSQL</li><li>Tailwind CSS</li><li>HTML y CSS</li><li>Git y GitHub</li></ul></div>
+        <div><h3>Cloud e infraestructura</h3><ul><li>Docker y Docker Compose</li><li>DigitalOcean</li><li>Netlify</li><li>Cloudflare</li><li>Microsoft Azure, en estudio</li></ul></div>
+        <div><h3>IA y automatización</h3><ul><li>API de Claude</li><li>Gemini API</li><li>n8n</li><li>Desarrollo asistido por IA</li></ul></div>
+        <div><h3>Redes y seguridad</h3><ul><li>Starlink</li><li>Wi-Fi mesh y TP-Link Omada</li><li>Cámaras IP</li><li>Alarmas y control de acceso</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto" aria-labelledby="contacto-titulo">
+    <div class="ancho contacto-in">
+      <h2 id="contacto-titulo">Hablemos</h2>
+      <p>Busco un puesto remoto en cloud, IA o desarrollo. Escribime por LinkedIn y coordinamos una charla.</p>
+      <div class="acciones">
+        <a class="boton primario" href="https://www.linkedin.com/in/jorge-luis-villegas-oliva-212704125/" target="_blank" rel="noopener">Escribirme por LinkedIn</a>
+        <a class="boton" href="https://github.com/jlvillegas" target="_blank" rel="noopener">Ver mi GitHub</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie">
+  <div class="ancho pie-in">
+    <p>Jorge Luis Villegas Oliva, Merlo, San Luis, Argentina.</p>
+    <p>Sitio hecho a mano y publicado en GitHub Pages. <a href="https://github.com/jlvillegas/portfolio" target="_blank" rel="noopener">Código del sitio</a></p>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
