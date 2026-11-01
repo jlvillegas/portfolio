@@ -16,20 +16,24 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#f3f5f2" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0e1615" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#070d14">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Schibsted+Grotesk:wght@600;700;800&display=swap">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="fx.css">
 <script>
   // Aplica el tema elegido antes de pintar, para que no parpadee.
-  try { var t = localStorage.getItem("tema"); if (t === "claro" || t === "oscuro") document.documentElement.setAttribute("data-theme", t === "claro" ? "light" : "dark"); } catch (e) {}
+  var t = null; try { t = localStorage.getItem("tema"); } catch (e) {}
+  document.documentElement.setAttribute("data-theme", t === "claro" ? "light" : "dark");
 </script>
 </head>
 <body>
 <a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="progreso" aria-hidden="true"></div>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="foco" aria-hidden="true"></div>
 
 <header class="barra">
   <div class="ancho barra-in">
@@ -55,11 +59,14 @@
 
 <main id="contenido">
 
-  <section class="hero ancho" id="inicio" aria-labelledby="titulo">
+  <section class="hero-wrap" aria-labelledby="titulo">
+  <canvas class="red" id="red" aria-hidden="true"></canvas>
+  <div class="hero ancho" id="inicio">
     <div class="hero-texto">
-      <p class="lugar">Analista en Sistemas en Merlo, San Luis, Argentina</p>
-      <h1 id="titulo">Software, sitios y redes para negocios reales.</h1>
+      <p class="lugar"><span class="chip-brillo">Analista en Sistemas</span> Merlo, San Luis, Argentina</p>
+      <h1 id="titulo">Software, sitios y redes para <span class="grad">negocios reales.</span></h1>
       <p class="bajada">Desarrollo sistemas web que se usan todos los días, sitios para comercios y la infraestructura que los sostiene: servidores, redes y nube. Hoy me estoy especializando en cloud e inteligencia artificial sobre Microsoft Azure.</p>
+      <p class="rota" aria-hidden="true">&gt; <span id="rota">sistemas en producción</span><i class="cursor"></i></p>
       <div class="acciones">
         <a class="boton primario" href="#sistema">Ver proyectos</a>
         <a class="boton" href="https://www.linkedin.com/in/jorge-luis-villegas-oliva-212704125/" target="_blank" rel="noopener">LinkedIn</a>
@@ -68,7 +75,7 @@
       <p class="disponible"><span class="punto" aria-hidden="true"></span>Disponible para trabajo remoto</p>
     </div>
 
-    <aside class="tablero" aria-labelledby="tablero-titulo">
+    <aside class="tablero inclinar" aria-labelledby="tablero-titulo">
       <div class="tablero-cabeza">
         <h2 id="tablero-titulo">Lo que tengo funcionando</h2>
         <p id="tablero-estado" class="tablero-nota">Comprobando los sitios…</p>
@@ -112,11 +119,24 @@
         </li>
       </ul>
     </aside>
+  </div>
   </section>
+
+  <section class="cifras ancho" aria-label="En números">
+    <div class="cifra revelar"><b data-contar="5">5</b><span>profesionales usan el sistema todos los días</span></div>
+    <div class="cifra revelar"><b data-contar="4">4</b><span>sitios web publicados y en línea</span></div>
+    <div class="cifra revelar"><b data-contar="53">53</b><span>grupos de pruebas automáticas</span></div>
+    <div class="cifra revelar"><b data-contar="2">2</b><span>certificaciones Microsoft Azure</span></div>
+  </section>
+
+  <div class="cinta" aria-hidden="true"><div class="cinta-in">
+    <span>React</span><span>Node.js</span><span>PostgreSQL</span><span>Docker</span><span>Microsoft Azure</span><span>API de Claude</span><span>n8n</span><span>Cloudflare</span><span>DigitalOcean</span><span>Starlink</span><span>TP-Link Omada</span><span>Tailwind CSS</span>
+    <span>React</span><span>Node.js</span><span>PostgreSQL</span><span>Docker</span><span>Microsoft Azure</span><span>API de Claude</span><span>n8n</span><span>Cloudflare</span><span>DigitalOcean</span><span>Starlink</span><span>TP-Link Omada</span><span>Tailwind CSS</span>
+  </div></div>
 
   <section class="seccion destacado" id="sistema" aria-labelledby="sistema-titulo">
     <div class="ancho">
-      <div class="cabeza-seccion">
+      <div class="cabeza-seccion revelar">
         <p class="etiqueta">Proyecto principal, en producción desde 2026</p>
         <h2 id="sistema-titulo">Sistema de gestión de la Clínica Villegas</h2>
       </div>
@@ -131,7 +151,7 @@
           <p class="nota-codigo">El código es privado porque también ofrezco el sistema a otros consultorios. En una entrevista puedo mostrar la demo con datos inventados.</p>
         </div>
 
-        <dl class="funciones">
+        <dl class="funciones revelar">
           <div><dt>Agenda y turnos</dt><dd>Agenda por profesional con lugares libres del día y del mes. Los pacientes piden turno desde un link y confirman o cancelan con un toque.</dd></div>
           <div><dt>Historia clínica</dt><dd>Odontograma con dos vistas, radiografías con visor y comparador antes y después, presupuestos y lo que debe cada paciente.</dd></div>
           <div><dt>Cobros y caja</dt><dd>Cobro con QR de Mercado Pago que entra solo a la caja por webhook y avisa a recepción quién pagó. Caja diaria, gastos, liquidaciones y reportes.</dd></div>
@@ -142,7 +162,7 @@
         </dl>
       </div>
 
-      <figure class="diagrama">
+      <figure class="diagrama revelar">
         <div class="diagrama-scroll" tabindex="0" role="region" aria-label="Diagrama de arquitectura, se puede desplazar horizontalmente">
           <svg viewBox="0 0 980 470" role="img" aria-labelledby="diag-t diag-d">
             <title id="diag-t">Arquitectura del sistema de gestión</title>
@@ -196,37 +216,37 @@
 
   <section class="seccion" id="sitios" aria-labelledby="sitios-titulo">
     <div class="ancho">
-      <div class="cabeza-seccion">
+      <div class="cabeza-seccion revelar">
         <h2 id="sitios-titulo">Sitios web</h2>
         <p class="intro">Sitios publicados en Netlify para negocios de la zona. Todos están pensados para que el cliente reciba consultas y pedidos por WhatsApp.</p>
       </div>
       <div class="galeria">
-        <article class="sitio">
-          <a class="ventana" href="https://villegasinsumos.com/" target="_blank" rel="noopener" aria-label="Abrir villegasinsumos.com">
+        <article class="sitio revelar">
+          <a class="ventana inclinar" href="https://villegasinsumos.com/" target="_blank" rel="noopener" aria-label="Abrir villegasinsumos.com">
             <span class="ventana-barra" aria-hidden="true"><i></i><i></i><i></i><span>villegasinsumos.com</span></span>
             <img src="img/villegasinsumos.jpg" width="1280" height="614" loading="lazy" alt="Portada de la tienda Villegas Insumos con el buscador de productos y una foto del local.">
           </a>
           <h3>Tienda online de Villegas Insumos</h3>
           <p>Catálogo de más de 200 productos odontológicos y médicos con variantes, búsqueda y categorías. El carrito arma el pedido y lo envía por WhatsApp. El sitio muestra si el local está abierto y tiene modo oscuro.</p>
         </article>
-        <article class="sitio">
-          <a class="ventana" href="https://villegascentromedicoodontologico.com/" target="_blank" rel="noopener" aria-label="Abrir el sitio de la Clínica Villegas">
+        <article class="sitio revelar">
+          <a class="ventana inclinar" href="https://villegascentromedicoodontologico.com/" target="_blank" rel="noopener" aria-label="Abrir el sitio de la Clínica Villegas">
             <span class="ventana-barra" aria-hidden="true"><i></i><i></i><i></i><span>villegascentromedicoodontologico.com</span></span>
             <img src="img/clinica-villegas-web.jpg" width="1280" height="614" loading="lazy" alt="Portada del sitio de la Clínica Villegas con los botones para pedir turno y urgencias.">
           </a>
           <h3>Sitio de la Clínica Villegas</h3>
           <p>Turnos y urgencias por WhatsApp, equipo, servicios y opiniones de Google. Comparte la identidad visual con el sistema de gestión.</p>
         </article>
-        <article class="sitio">
-          <a class="ventana" href="https://odontologa-alejandravillegas.netlify.app/" target="_blank" rel="noopener" aria-label="Abrir el sitio de la odontóloga Alejandra Villegas">
+        <article class="sitio revelar">
+          <a class="ventana inclinar" href="https://odontologa-alejandravillegas.netlify.app/" target="_blank" rel="noopener" aria-label="Abrir el sitio de la odontóloga Alejandra Villegas">
             <span class="ventana-barra" aria-hidden="true"><i></i><i></i><i></i><span>odontologa-alejandravillegas.netlify.app</span></span>
             <img src="img/alejandra-villegas.jpg" width="1280" height="614" loading="lazy" alt="Portada del sitio de la odontóloga Alejandra Villegas con su logo y una foto atendiendo.">
           </a>
           <h3>Marca personal de una odontóloga</h3>
           <p>Odontología y armonización orofacial: tratamientos, enfoque profesional y contacto, con una identidad propia distinta de la clínica.</p>
         </article>
-        <article class="sitio">
-          <a class="ventana" href="https://franciscus-merlo-san-luis.netlify.app/" target="_blank" rel="noopener" aria-label="Abrir el sitio de la Residencia Franciscus">
+        <article class="sitio revelar">
+          <a class="ventana inclinar" href="https://franciscus-merlo-san-luis.netlify.app/" target="_blank" rel="noopener" aria-label="Abrir el sitio de la Residencia Franciscus">
             <span class="ventana-barra" aria-hidden="true"><i></i><i></i><i></i><span>franciscus-merlo-san-luis.netlify.app</span></span>
             <img src="img/franciscus.jpg" width="1280" height="614" loading="lazy" alt="Portada del sitio de la Residencia Franciscus con una foto de la casa entre pinos.">
           </a>
@@ -240,7 +260,7 @@
   <section class="seccion" id="ia" aria-labelledby="ia-titulo">
     <div class="ancho dos-columnas">
       <div class="texto-largo">
-        <div class="cabeza-seccion">
+        <div class="cabeza-seccion revelar">
           <h2 id="ia-titulo">Automatización e IA</h2>
         </div>
         <h3>AI Lead Qualifier</h3>
@@ -258,7 +278,7 @@
         </p>
         <ul class="pilas" aria-label="Tecnologías del flujo"><li>n8n</li><li>Gemini API</li><li>Google Sheets</li><li>Gmail</li><li>JavaScript</li></ul>
       </div>
-      <div class="texto-largo recuadro">
+      <div class="texto-largo recuadro revelar inclinar">
         <h3>IA dentro del sistema de la clínica</h3>
         <ul class="lista">
           <li><strong>Dictado clínico.</strong> El odontólogo aprieta el micrófono en la tablet, dice lo que hizo y Claude lo ordena en prestaciones, piezas, caras y próximo turno. No se guarda nada sin que lo revise.</li>
@@ -274,7 +294,7 @@
   <section class="seccion" id="redes" aria-labelledby="redes-titulo">
     <div class="ancho dos-columnas">
       <div class="texto-largo">
-        <div class="cabeza-seccion">
+        <div class="cabeza-seccion revelar">
           <h2 id="redes-titulo">Redes e infraestructura</h2>
         </div>
         <p class="lead">Con Villegas Insumos Tecnológicos instalo enlaces Starlink, redes Wi-Fi mesh y access points, cámaras IP y alarmas para casas, cabañas y comercios.</p>
@@ -297,10 +317,10 @@
   <section class="seccion" id="experiencia" aria-labelledby="experiencia-titulo">
     <div class="ancho dos-columnas">
       <div>
-        <div class="cabeza-seccion">
+        <div class="cabeza-seccion revelar">
           <h2 id="experiencia-titulo">Experiencia</h2>
         </div>
-        <ol class="linea-tiempo">
+        <ol class="linea-tiempo revelar">
           <li>
             <p class="periodo">2023 a hoy</p>
             <h3>Fundador y técnico en conectividad y seguridad</h3>
@@ -316,10 +336,10 @@
         </ol>
       </div>
       <div>
-        <div class="cabeza-seccion">
+        <div class="cabeza-seccion revelar">
           <h2>Formación</h2>
         </div>
-        <ol class="linea-tiempo">
+        <ol class="linea-tiempo revelar">
           <li>
             <p class="periodo">2024 a 2027</p>
             <h3>Licenciatura en Informática</h3>
@@ -327,9 +347,9 @@
             <p>Título intermedio obtenido: Analista Universitario en Sistemas de Computación.</p>
           </li>
           <li>
-            <p class="periodo">En preparación</p>
-            <h3>Microsoft Azure</h3>
-            <p>Azure Fundamentals (AZ-900) y Azure AI Fundamentals (AI-901).</p>
+            <p class="periodo">Octubre 2026, aprobadas</p>
+            <h3>Microsoft Certified: Azure</h3>
+            <p>Azure Fundamentals (AZ-900) y Azure AI Fundamentals (AI-901). Próxima: Azure AI Apps and Agents Developer (AI-103).</p>
           </li>
           <li>
             <p class="periodo">Cursando</p>
@@ -343,12 +363,12 @@
 
   <section class="seccion" id="aptitudes" aria-labelledby="aptitudes-titulo">
     <div class="ancho">
-      <div class="cabeza-seccion">
+      <div class="cabeza-seccion revelar">
         <h2 id="aptitudes-titulo">Con qué trabajo</h2>
       </div>
-      <div class="aptitudes">
+      <div class="aptitudes revelar">
         <div><h3>Desarrollo web</h3><ul><li>React</li><li>TypeScript y JavaScript</li><li>Node.js</li><li>PostgreSQL</li><li>Tailwind CSS</li><li>HTML y CSS</li><li>Git y GitHub</li></ul></div>
-        <div><h3>Cloud e infraestructura</h3><ul><li>Docker y Docker Compose</li><li>DigitalOcean</li><li>Netlify</li><li>Cloudflare</li><li>Microsoft Azure, en estudio</li></ul></div>
+        <div><h3>Cloud e infraestructura</h3><ul><li>Docker y Docker Compose</li><li>DigitalOcean</li><li>Netlify</li><li>Cloudflare</li><li>Microsoft Azure (AZ-900, AI-901)</li></ul></div>
         <div><h3>IA y automatización</h3><ul><li>API de Claude</li><li>Gemini API</li><li>n8n</li><li>Desarrollo asistido por IA</li></ul></div>
         <div><h3>Redes y seguridad</h3><ul><li>Starlink</li><li>Wi-Fi mesh y TP-Link Omada</li><li>Cámaras IP</li><li>Alarmas y control de acceso</li></ul></div>
       </div>
@@ -376,5 +396,6 @@
 </footer>
 
 <script src="script.js" defer></script>
+<script src="fx.js" defer></script>
 </body>
 </html>
