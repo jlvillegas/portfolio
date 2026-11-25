@@ -101,6 +101,8 @@ git push
 
 Tarda uno o dos minutos en verse en https://jlvillegas.github.io/portfolio/.
 
+Si se cambia `styles.css`, `fx.css`, `script.js` o `fx.js`, cambiar también el `?v=` con que los llama `index.html` (por ejemplo la fecha del día). Si no, los navegadores pueden seguir usando la versión vieja hasta 10 minutos.
+
 ## Historial
 
 - 25/11/2026: sección de los Smart Switch Tuya con su diagrama; cuatro sitios nuevos (Inmobiliaria Graciela Nicoletti con su pantalla de TV, Unalome Aparts, Cabañas Abuela Lety y Manjares de Merlo); sección "Sistemas que estoy armando" con la demo del sistema para comercios; tablero de la portada con los sitios en chips; novedades del sistema de la clínica (turnos por chat, Laboratorio 3D, robot del sistema anterior, versión para otra profesional); 77 grupos de pruebas; menú en un solo renglón en pantallas medianas.
