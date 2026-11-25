@@ -59,7 +59,7 @@
 
   // ---- Texto que se escribe solo ----
   var rota = document.getElementById("rota");
-  var frases = ["sistemas en producción", "cloud e IA sobre Azure", "redes Starlink y Wi-Fi mesh", "automatizaciones con n8n", "sitios que traen clientes"];
+  var frases = ["sistemas en producción", "enchufes que siguen la agenda", "cloud e IA sobre Azure", "redes Starlink y Wi-Fi mesh", "sitios que traen clientes", "automatizaciones con n8n"];
   if (rota) {
     var i = 0, j = frases[0].length, borrando = true;
     (function tic() {

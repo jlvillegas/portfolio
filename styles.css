@@ -314,3 +314,29 @@ a.servicio-dato:hover { text-decoration: underline; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Tablero: sitios publicados en chips, debajo de los sistemas */
+.tablero-sitios { padding: 16px 22px 20px; border-top: 1px solid var(--rule); }
+.tablero-sub { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.sitios-chips { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.chip { position: relative; display: flex; align-items: center; gap: 10px; min-width: 0; padding: 8px 12px; border: 1px solid var(--rule); border-radius: 10px; background: var(--frame); }
+.chip .led { flex: none; }
+.chip a { color: var(--ink); text-decoration: none; font-size: 0.9rem; font-weight: 500; line-height: 1.3; min-width: 0; overflow-wrap: anywhere; }
+.chip a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.chip:hover { border-color: var(--accent); }
+.chip:hover a { color: var(--accent); }
+
+/* Sistemas en curso */
+.proyecto-destacado { align-items: center; margin-bottom: 48px; }
+.estado-proyecto { justify-self: start; display: inline-block; font-size: 0.8rem; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+.proyectos { display: grid; gap: 20px; }
+@media (min-width: 640px) { .proyectos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 980px) { .proyectos { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.proyecto { display: grid; gap: 10px; align-content: start; padding: 22px; border-radius: 16px; background: var(--surface); border: 1px solid var(--rule); }
+.proyecto h3 { font-size: 1.12rem; font-weight: 700; letter-spacing: -0.01em; }
+.proyecto p { color: var(--ink-2); }
+.sitio .enlaces { margin-top: 2px; }
+
+/* Menú con ocho secciones: que no se corte en dos renglones en pantallas medianas */
+.menu a { white-space: nowrap; }
+@media (max-width: 1060px) { .menu { gap: 0; } .menu a { padding: 8px 7px; font-size: 0.9rem; } }

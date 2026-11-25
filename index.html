@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Jorge Luis Villegas Oliva | Portfolio</title>
-<meta name="description" content="Analista en Sistemas en Merlo, San Luis. Desarrollo sistemas web en producción, sitios para negocios y la infraestructura que los sostiene. Me especializo en cloud e IA sobre Microsoft Azure.">
+<meta name="description" content="Analista en Sistemas en Merlo, San Luis. Desarrollo sistemas web en producción, sitios para negocios, automatizaciones con enchufes inteligentes y la infraestructura que los sostiene. Me especializo en cloud e IA sobre Microsoft Azure.">
 <meta name="author" content="Jorge Luis Villegas Oliva">
 <link rel="canonical" href="https://jlvillegas.github.io/portfolio/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Jorge Luis Villegas Oliva | Portfolio">
-<meta property="og:description" content="Sistemas web en producción, sitios para negocios y redes. Cloud e IA sobre Microsoft Azure.">
+<meta property="og:description" content="Sistemas web en producción, sitios para negocios, automatización IoT y redes. Cloud e IA sobre Microsoft Azure.">
 <meta property="og:url" content="https://jlvillegas.github.io/portfolio/">
 <meta property="og:image" content="https://jlvillegas.github.io/portfolio/img/og.png">
 <meta property="og:image:width" content="1200">
@@ -44,7 +44,9 @@
     <nav aria-label="Secciones">
       <ul class="menu">
         <li><a href="#sistema">Sistema</a></li>
+        <li><a href="#iot">IoT</a></li>
         <li><a href="#sitios">Sitios</a></li>
+        <li><a href="#en-curso">En curso</a></li>
         <li><a href="#ia">IA</a></li>
         <li><a href="#redes">Redes</a></li>
         <li><a href="#experiencia">Experiencia</a></li>
@@ -65,7 +67,7 @@
     <div class="hero-texto">
       <p class="lugar"><span class="chip-brillo">Analista en Sistemas</span> Merlo, San Luis, Argentina</p>
       <h1 id="titulo">Software, sitios y redes para <span class="grad">negocios reales.</span></h1>
-      <p class="bajada">Desarrollo sistemas web que se usan todos los días, sitios para comercios y la infraestructura que los sostiene: servidores, redes y nube. Hoy me estoy especializando en cloud e inteligencia artificial sobre Microsoft Azure.</p>
+      <p class="bajada">Desarrollo sistemas web que se usan todos los días, sitios para negocios de la zona, automatizaciones con enchufes inteligentes y la infraestructura que los sostiene: servidores, redes y nube. Hoy me estoy especializando en cloud e inteligencia artificial sobre Microsoft Azure.</p>
       <p class="rota" aria-hidden="true">&gt; <span id="rota">sistemas en producción</span><i class="cursor"></i></p>
       <div class="acciones">
         <a class="boton primario" href="#sistema">Ver proyectos</a>
@@ -87,29 +89,17 @@
           <span class="servicio-dato">servidor propio, acceso con Google</span>
           <span class="servicio-estado">En producción</span>
         </li>
-        <li class="servicio" data-url="https://villegasinsumos.com/">
-          <span class="led" aria-hidden="true"></span>
-          <span class="servicio-nombre">Tienda online Villegas Insumos</span>
-          <a class="servicio-dato" href="https://villegasinsumos.com/" target="_blank" rel="noopener">villegasinsumos.com</a>
-          <span class="servicio-estado">Publicado</span>
+        <li class="servicio">
+          <span class="led" data-estado="ok" aria-hidden="true"></span>
+          <span class="servicio-nombre">Compresores y carteles con Smart Switch Tuya</span>
+          <a class="servicio-dato" href="#iot">se prenden solos con la agenda</a>
+          <span class="servicio-estado">En producción</span>
         </li>
-        <li class="servicio" data-url="https://villegascentromedicoodontologico.com/">
+        <li class="servicio" data-url="https://marblanco-demo-sistema.netlify.app/" data-ok="Demo en línea">
           <span class="led" aria-hidden="true"></span>
-          <span class="servicio-nombre">Sitio de la Clínica Villegas</span>
-          <a class="servicio-dato" href="https://villegascentromedicoodontologico.com/" target="_blank" rel="noopener">villegascentromedicoodontologico.com</a>
-          <span class="servicio-estado">Publicado</span>
-        </li>
-        <li class="servicio" data-url="https://odontologa-alejandravillegas.netlify.app/">
-          <span class="led" aria-hidden="true"></span>
-          <span class="servicio-nombre">Marca personal de una odontóloga</span>
-          <a class="servicio-dato" href="https://odontologa-alejandravillegas.netlify.app/" target="_blank" rel="noopener">odontologa-alejandravillegas.netlify.app</a>
-          <span class="servicio-estado">Publicado</span>
-        </li>
-        <li class="servicio" data-url="https://franciscus-merlo-san-luis.netlify.app/">
-          <span class="led" aria-hidden="true"></span>
-          <span class="servicio-nombre">Residencia Franciscus</span>
-          <a class="servicio-dato" href="https://franciscus-merlo-san-luis.netlify.app/" target="_blank" rel="noopener">franciscus-merlo-san-luis.netlify.app</a>
-          <span class="servicio-estado">Publicado</span>
+          <span class="servicio-nombre">Sistema de gestión para comercios</span>
+          <a class="servicio-dato" href="https://marblanco-demo-sistema.netlify.app/" target="_blank" rel="noopener">ventas, stock y pantalla al cliente</a>
+          <span class="servicio-estado">Demo</span>
         </li>
         <li class="servicio">
           <span class="led" data-estado="ok" aria-hidden="true"></span>
@@ -118,20 +108,34 @@
           <span class="servicio-estado">Código abierto</span>
         </li>
       </ul>
+      <div class="tablero-sitios">
+        <p class="tablero-sub">Sitios publicados</p>
+        <ul class="sitios-chips">
+          <li class="chip" data-url="https://villegasinsumos.com/"><span class="led" aria-hidden="true"></span><a href="https://villegasinsumos.com/" target="_blank" rel="noopener">Villegas Insumos</a></li>
+          <li class="chip" data-url="https://villegascentromedicoodontologico.com/"><span class="led" aria-hidden="true"></span><a href="https://villegascentromedicoodontologico.com/" target="_blank" rel="noopener">Clínica Villegas</a></li>
+          <li class="chip" data-url="https://graciela-nicoletti-demo.netlify.app/"><span class="led" aria-hidden="true"></span><a href="https://graciela-nicoletti-demo.netlify.app/" target="_blank" rel="noopener">Inmobiliaria Nicoletti</a></li>
+          <li class="chip" data-url="https://nicoletti-tv.netlify.app/"><span class="led" aria-hidden="true"></span><a href="https://nicoletti-tv.netlify.app/" target="_blank" rel="noopener">Nicoletti TV</a></li>
+          <li class="chip" data-url="https://unalome-aparts.netlify.app/"><span class="led" aria-hidden="true"></span><a href="https://unalome-aparts.netlify.app/" target="_blank" rel="noopener">Unalome Aparts</a></li>
+          <li class="chip" data-url="https://abuela-lety-demo.netlify.app/"><span class="led" aria-hidden="true"></span><a href="https://abuela-lety-demo.netlify.app/" target="_blank" rel="noopener">Cabañas Abuela Lety</a></li>
+          <li class="chip" data-url="https://manjares-de-merlo.netlify.app/"><span class="led" aria-hidden="true"></span><a href="https://manjares-de-merlo.netlify.app/" target="_blank" rel="noopener">Manjares de Merlo</a></li>
+          <li class="chip" data-url="https://odontologa-alejandravillegas.netlify.app/"><span class="led" aria-hidden="true"></span><a href="https://odontologa-alejandravillegas.netlify.app/" target="_blank" rel="noopener">Odontóloga Villegas</a></li>
+          <li class="chip" data-url="https://franciscus-merlo-san-luis.netlify.app/"><span class="led" aria-hidden="true"></span><a href="https://franciscus-merlo-san-luis.netlify.app/" target="_blank" rel="noopener">Residencia Franciscus</a></li>
+        </ul>
+      </div>
     </aside>
   </div>
   </section>
 
   <section class="cifras ancho" aria-label="En números">
     <div class="cifra revelar"><b data-contar="5">5</b><span>profesionales usan el sistema todos los días</span></div>
-    <div class="cifra revelar"><b data-contar="4">4</b><span>sitios web publicados y en línea</span></div>
-    <div class="cifra revelar"><b data-contar="53">53</b><span>grupos de pruebas automáticas</span></div>
+    <div class="cifra revelar"><b data-contar="8">8</b><span>sitios web publicados y en línea</span></div>
+    <div class="cifra revelar"><b data-contar="77">77</b><span>grupos de pruebas automáticas</span></div>
     <div class="cifra revelar"><b data-contar="2">2</b><span>certificaciones Microsoft Azure</span></div>
   </section>
 
   <div class="cinta" aria-hidden="true"><div class="cinta-in">
-    <span>React</span><span>Node.js</span><span>PostgreSQL</span><span>Docker</span><span>Microsoft Azure</span><span>API de Claude</span><span>n8n</span><span>Cloudflare</span><span>DigitalOcean</span><span>Starlink</span><span>TP-Link Omada</span><span>Tailwind CSS</span>
-    <span>React</span><span>Node.js</span><span>PostgreSQL</span><span>Docker</span><span>Microsoft Azure</span><span>API de Claude</span><span>n8n</span><span>Cloudflare</span><span>DigitalOcean</span><span>Starlink</span><span>TP-Link Omada</span><span>Tailwind CSS</span>
+    <span>React</span><span>Node.js</span><span>PostgreSQL</span><span>Docker</span><span>Microsoft Azure</span><span>API de Claude</span><span>Tuya Cloud</span><span>n8n</span><span>Python</span><span>Cloudflare</span><span>DigitalOcean</span><span>Netlify</span><span>Starlink</span><span>TP-Link Omada</span><span>Tailwind CSS</span>
+    <span>React</span><span>Node.js</span><span>PostgreSQL</span><span>Docker</span><span>Microsoft Azure</span><span>API de Claude</span><span>Tuya Cloud</span><span>n8n</span><span>Python</span><span>Cloudflare</span><span>DigitalOcean</span><span>Netlify</span><span>Starlink</span><span>TP-Link Omada</span><span>Tailwind CSS</span>
   </div></div>
 
   <section class="seccion destacado" id="sistema" aria-labelledby="sistema-titulo">
@@ -145,20 +149,23 @@
         <div class="texto-largo">
           <p class="lead">Reemplaza el software anterior, las planillas y el papel de una clínica odontológica de Villa de Merlo con más de 30 años. Lo usan todos los días cinco profesionales, la recepción y la administración, cada uno con su propio acceso.</p>
           <h3>Mi parte</h3>
-          <p>Relevé cómo trabaja cada persona de la clínica, decido qué se construye y en qué orden, lo publico y le doy soporte. El código lo escribo con asistentes de IA (Claude y Codex) sobre un mismo repositorio de GitHub, con 53 grupos de pruebas automáticas y un registro del estado del proyecto que cada asistente lee antes de empezar.</p>
+          <p>Relevé cómo trabaja cada persona de la clínica, decido qué se construye y en qué orden, lo publico y le doy soporte. El código lo escribo con asistentes de IA (Claude y Codex) sobre un mismo repositorio de GitHub, con 77 grupos de pruebas automáticas y un registro del estado del proyecto que cada asistente lee antes de empezar.</p>
           <h3>Dónde corre</h3>
           <p>En Docker Compose (web, API y base de datos) sobre un servidor de DigitalOcean, publicado con Cloudflare. Cada cambio que llega a la rama principal de GitHub se instala solo. Antes corría en una mini PC de la clínica, que hoy queda de respaldo.</p>
           <p class="nota-codigo">El código es privado porque también ofrezco el sistema a otros consultorios. En una entrevista puedo mostrar la demo con datos inventados.</p>
         </div>
 
         <dl class="funciones revelar">
-          <div><dt>Agenda y turnos</dt><dd>Agenda por profesional con lugares libres del día y del mes. Los pacientes piden turno desde un link y confirman o cancelan con un toque.</dd></div>
+          <div><dt>Agenda y turnos</dt><dd>Agenda por profesional con lugares libres del día y del mes, también en el celular. Los pacientes piden turno desde un link y confirman o cancelan con un toque. Un robot trae cada 30 minutos los turnos que todavía se cargan en el sistema anterior.</dd></div>
+          <div><dt>Turnos por chat</dt><dd>En la página de turnos, el paciente pregunta en un chat y la IA le ofrece los horarios libres reales de cada profesional, según su obra social.</dd></div>
           <div><dt>Historia clínica</dt><dd>Odontograma con dos vistas, radiografías con visor y comparador antes y después, presupuestos y lo que debe cada paciente.</dd></div>
           <div><dt>Cobros y caja</dt><dd>Cobro con QR de Mercado Pago que entra solo a la caja por webhook y avisa a recepción quién pagó. Caja diaria, gastos, liquidaciones y reportes.</dd></div>
-          <div><dt>Sala de espera</dt><dd>La TV llama por los últimos tres números del DNI con una voz neuronal que genera el propio servidor, y ordena los llamados para que no se pisen.</dd></div>
+          <div><dt>Sala de espera</dt><dd>La TV llama por los últimos tres números del DNI con una voz neuronal que genera el propio servidor, y ordena los llamados para que no se pisen. Entre llamados pasa reels de la clínica, consejos y códigos QR para dejar una reseña o escribir por una urgencia.</dd></div>
           <div><dt>IA en el consultorio</dt><dd>El odontólogo dicta en la tablet lo que hizo y Claude lo ordena en prestaciones, piezas y caras. También lee fichas en papel escaneadas y marca lo dudoso para revisar.</dd></div>
+          <div><dt>Laboratorio 3D</dt><dd>Mis trabajos de diseño e impresión 3D para las odontólogas, en un tablero por estado. La fecha de entrega sale sola del próximo turno del paciente.</dd></div>
+          <div><dt>Compresores automáticos</dt><dd>Cada compresor se prende antes del primer turno y se apaga después del último, con enchufes inteligentes. <a href="#iot">Cómo funciona</a>.</dd></div>
           <div><dt>Accesos por rol</dt><dd>Ingreso con Google. Recepción, profesionales, cuentas y administración ven sólo lo que les toca.</dd></div>
-          <div><dt>Demo para otros consultorios</dt><dd>El mismo sistema arranca en modo demo, con datos inventados y adaptado a otro rubro, para mostrarlo a otros profesionales.</dd></div>
+          <div><dt>Para otros consultorios</dt><dd>El mismo sistema arranca en modo demo, con datos inventados y adaptado a otro rubro. Ya armé la versión de una odontóloga con tres sedes: agenda y turnero, con su logo y sus colores.</dd></div>
         </dl>
       </div>
 
@@ -214,11 +221,92 @@
     </div>
   </section>
 
+  <section class="seccion" id="iot" aria-labelledby="iot-titulo">
+    <div class="ancho">
+      <div class="cabeza-seccion revelar">
+        <p class="etiqueta">Automatización con Smart Switch Tuya, en producción desde octubre de 2026</p>
+        <h2 id="iot-titulo">Enchufes inteligentes que siguen la agenda</h2>
+        <p class="intro">Los cuatro compresores de los consultorios y los carteles luminosos de la clínica y de Villegas Insumos están conectados a enchufes inteligentes Smart Life (Tuya). El sistema de gestión los prende y los apaga solo: los compresores según los turnos de cada odontóloga y los carteles según la hora en que oscurece.</p>
+      </div>
+
+      <div class="dos-columnas">
+        <div class="texto-largo">
+          <h3>Compresores: según los turnos</h3>
+          <ol class="pasos">
+            <li>Cada minuto, la API del sistema mira los turnos del día de cada odontóloga, sin contar los cancelados.</li>
+            <li>Prende su compresor 15 minutos antes del primer turno y lo apaga 15 minutos después de que termina el último. Si se agrega un turno más tarde, el horario se alarga solo.</li>
+            <li>Lunes, miércoles y viernes lo apaga en la siesta, de 13 a 16, y lo vuelve a prender 15 minutos antes del primer turno de la tarde.</li>
+            <li>Si alguien lo prende o lo apaga a mano, el automático lo respeta hasta el próximo turno. Queda anotado quién lo cambió y cuándo, y como se guarda en la base, aguanta un reinicio del servidor.</li>
+          </ol>
+          <h3>Carteles: según la luz del día</h3>
+          <p>Se prenden todas las noches desde 15 minutos antes de la puesta del sol hasta la 01:30, y en días de colegio de 07:15 a 08:30, cuando llevan a los chicos a la escuela. En feriados y vacaciones, a la mañana mientras sigue oscuro. La hora del atardecer sale del pronóstico de Merlo (Open-Meteo) y, si no hay internet, se calcula con la fórmula del sol. Los horarios, los feriados y las vacaciones escolares se cambian desde el panel, sin tocar el código.</p>
+        </div>
+
+        <div class="texto-largo recuadro revelar inclinar">
+          <h3>Panel de control</h3>
+          <ul class="lista">
+            <li><strong>Un color por enchufe.</strong> Verde si está prendido en horario, gris si está apagado como corresponde, ámbar si no coincide con la agenda y rojo si se quedó sin conexión.</li>
+            <li><strong>Prender y apagar a mano</strong> desde la pantalla Salud del sistema, que ven administración y recepción.</li>
+            <li><strong>Enchufes nuevos.</strong> Si Tuya ve un enchufe que no está asignado, el panel lo muestra para indicar si es un cartel o no.</li>
+          </ul>
+          <h3>Cómo está hecho</h3>
+          <p>La API en Node.js le habla a la nube de Tuya (Tuya Cloud API) con pedidos firmados con HMAC-SHA256. Cada enchufe va por su lado: si uno se queda sin conexión, los demás siguen y ese reintenta al minuto. Tiene pruebas automáticas con Tuya y la base simulados.</p>
+          <h3>La red</h3>
+          <p>Para que los enchufes no se queden sin conexión, los estoy pasando a una red Wi-Fi de 2,4 GHz sólo para dispositivos IoT, separada de la red de trabajo y de la de las cámaras, en el access point TP-Link Omada que administro desde la nube.</p>
+        </div>
+      </div>
+
+      <figure class="diagrama revelar">
+        <div class="diagrama-scroll" tabindex="0" role="region" aria-label="Diagrama de la automatización, se puede desplazar horizontalmente">
+          <svg viewBox="0 0 980 300" role="img" aria-labelledby="iot-diag-t iot-diag-d">
+            <title id="iot-diag-t">Cómo se prenden y apagan los enchufes</title>
+            <desc id="iot-diag-d">Los turnos del día, la hora del atardecer en Merlo y los cambios hechos a mano desde el panel llegan a la API del sistema, que corre con PostgreSQL en un servidor de DigitalOcean. La API revisa cada minuto y le manda las órdenes a la nube de Tuya, que prende o apaga los cuatro compresores, los carteles de la clínica y el cartel de Villegas Insumos.</desc>
+            <defs>
+              <marker id="flecha-iot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="d-punta"/></marker>
+            </defs>
+
+            <text x="20" y="28" class="d-titulo">Qué decide</text>
+            <g class="d-nodo"><rect x="20" y="44" width="200" height="58" rx="10"/><text x="36" y="69" class="d-nombre">Turnos del día</text><text x="36" y="89" class="d-detalle">Agenda de cada odontóloga</text></g>
+            <g class="d-nodo"><rect x="20" y="118" width="200" height="58" rx="10"/><text x="36" y="143" class="d-nombre">Atardecer en Merlo</text><text x="36" y="163" class="d-detalle">Open-Meteo o fórmula del sol</text></g>
+            <g class="d-nodo"><rect x="20" y="192" width="200" height="58" rx="10"/><text x="36" y="217" class="d-nombre">Panel de Salud</text><text x="36" y="237" class="d-detalle">Prender o apagar a mano</text></g>
+
+            <rect x="262" y="12" width="236" height="276" rx="16" class="d-grupo"/>
+            <text x="282" y="40" class="d-titulo">Servidor en DigitalOcean</text>
+            <g class="d-nodo d-acento"><rect x="282" y="80" width="196" height="64" rx="10"/><text x="298" y="106" class="d-nombre">API en Node.js</text><text x="298" y="127" class="d-detalle">Revisa cada minuto</text></g>
+            <g class="d-nodo d-acento"><rect x="282" y="196" width="196" height="64" rx="10"/><text x="298" y="222" class="d-nombre">PostgreSQL</text><text x="298" y="243" class="d-detalle">Turnos y registro</text></g>
+            <path d="M220 73 C 250 73, 250 112, 280 112" class="d-linea" marker-end="url(#flecha-iot)"/>
+            <path d="M220 147 C 250 147, 250 112, 280 112" class="d-linea"/>
+            <path d="M220 221 C 250 221, 250 112, 280 112" class="d-linea"/>
+            <path d="M380 146 L 380 194" class="d-linea" marker-start="url(#flecha-iot)" marker-end="url(#flecha-iot)"/>
+
+            <g class="d-nodo d-borde"><rect x="530" y="75" width="180" height="74" rx="10"/><text x="546" y="101" class="d-nombre">Tuya Cloud API</text><text x="546" y="121" class="d-detalle">Órdenes firmadas</text><text x="546" y="139" class="d-detalle">con HMAC-SHA256</text></g>
+            <path d="M480 112 L 528 112" class="d-linea" marker-start="url(#flecha-iot)" marker-end="url(#flecha-iot)"/>
+
+            <rect x="744" y="12" width="226" height="276" rx="16" class="d-grupo"/>
+            <text x="760" y="40" class="d-titulo">Enchufes Smart Life</text>
+            <text x="760" y="60" class="d-detalle">Wi-Fi 2,4 GHz</text>
+            <g class="d-nodo"><rect x="760" y="76" width="196" height="56" rx="10"/><text x="776" y="100" class="d-nombre">4 compresores</text><text x="776" y="119" class="d-detalle">Uno por consultorio</text></g>
+            <g class="d-nodo"><rect x="760" y="146" width="196" height="56" rx="10"/><text x="776" y="170" class="d-nombre">Carteles de la clínica</text><text x="776" y="189" class="d-detalle">De noche y a la mañana</text></g>
+            <g class="d-nodo"><rect x="760" y="216" width="196" height="56" rx="10"/><text x="776" y="240" class="d-nombre">Cartel de Insumos</text><text x="776" y="259" class="d-detalle">Con un relé</text></g>
+            <path d="M712 112 C 735 112, 735 104, 758 104" class="d-linea" marker-end="url(#flecha-iot)"/>
+            <path d="M712 112 C 735 112, 735 174, 758 174" class="d-linea" marker-end="url(#flecha-iot)"/>
+            <path d="M712 112 C 735 112, 735 244, 758 244" class="d-linea" marker-end="url(#flecha-iot)"/>
+          </svg>
+        </div>
+        <figcaption>Cómo está armado. La API decide con los turnos, la hora del atardecer y lo que se cambió a mano, y le manda las órdenes a cada enchufe por la nube de Tuya, que también le devuelve el estado de cada uno.</figcaption>
+      </figure>
+
+      <ul class="pilas" aria-label="Tecnologías de la automatización">
+        <li>Tuya Cloud API</li><li>Smart Life</li><li>Node.js</li><li>PostgreSQL</li><li>HMAC-SHA256</li><li>Open-Meteo</li><li>TP-Link Omada</li>
+      </ul>
+    </div>
+  </section>
+
   <section class="seccion" id="sitios" aria-labelledby="sitios-titulo">
     <div class="ancho">
       <div class="cabeza-seccion revelar">
         <h2 id="sitios-titulo">Sitios web</h2>
-        <p class="intro">Sitios publicados en Netlify para negocios de la zona. Todos están pensados para que el cliente reciba consultas y pedidos por WhatsApp.</p>
+        <p class="intro">Sitios publicados en Netlify para negocios de la zona: alojamientos, una inmobiliaria, comercios y consultorios. Todos están pensados para que el cliente reciba consultas y pedidos por WhatsApp.</p>
       </div>
       <div class="galeria">
         <article class="sitio revelar">
@@ -230,12 +318,45 @@
           <p>Catálogo de más de 200 productos odontológicos y médicos con variantes, búsqueda y categorías. El carrito arma el pedido y lo envía por WhatsApp. El sitio muestra si el local está abierto y tiene modo oscuro.</p>
         </article>
         <article class="sitio revelar">
+          <a class="ventana inclinar" href="https://graciela-nicoletti-demo.netlify.app/" target="_blank" rel="noopener" aria-label="Abrir el sitio de la inmobiliaria Graciela Nicoletti">
+            <span class="ventana-barra" aria-hidden="true"><i></i><i></i><i></i><span>graciela-nicoletti-demo.netlify.app</span></span>
+            <img src="img/graciela-nicoletti.jpg" width="1280" height="614" loading="lazy" alt="Portada del sitio de la inmobiliaria Graciela Nicoletti con el buscador de propiedades sobre la foto de una casa de Merlo.">
+          </a>
+          <h3>Inmobiliaria Graciela Nicoletti</h3>
+          <p>Casas, terrenos y campos de Merlo y la región, con buscador por tipo, zona y presupuesto, mapa, favoritos y consulta por WhatsApp con un toque. Las propiedades que bajaron de precio aparecen destacadas. Lo acompaña una pantalla para la TV de la inmobiliaria, que pasa las propiedades con un QR para consultar.</p>
+          <p class="enlaces"><a href="https://nicoletti-tv.netlify.app/" target="_blank" rel="noopener">Ver la pantalla de la TV</a></p>
+        </article>
+        <article class="sitio revelar">
+          <a class="ventana inclinar" href="https://unalome-aparts.netlify.app/" target="_blank" rel="noopener" aria-label="Abrir el sitio de Unalome Aparts">
+            <span class="ventana-barra" aria-hidden="true"><i></i><i></i><i></i><span>unalome-aparts.netlify.app</span></span>
+            <img src="img/unalome.jpg" width="1280" height="614" loading="lazy" alt="Portada del sitio de Unalome Aparts con su logo y una foto de las sierras de Merlo.">
+          </a>
+          <h3>Unalome Aparts</h3>
+          <p>Aparts solo para adultos al pie de la sierra: comodidades, trabajo remoto con Starlink, fotos, tarifas y una sección muy visual de cómo llegar, porque el lugar queda medio escondido. La consulta de disponibilidad va por WhatsApp.</p>
+        </article>
+        <article class="sitio revelar">
+          <a class="ventana inclinar" href="https://abuela-lety-demo.netlify.app/" target="_blank" rel="noopener" aria-label="Abrir el sitio de Cabañas Abuela Lety">
+            <span class="ventana-barra" aria-hidden="true"><i></i><i></i><i></i><span>abuela-lety-demo.netlify.app</span></span>
+            <img src="img/abuela-lety.jpg" width="1280" height="614" loading="lazy" alt="Portada del sitio de Cabañas Abuela Lety con la pileta del complejo y las sierras de fondo.">
+          </a>
+          <h3>Cabañas Abuela Lety</h3>
+          <p>Complejo familiar a cinco cuadras del centro de Merlo: los dos tipos de cabaña con fotos y lo que incluye cada una, opiniones de Google y Booking, ubicación y consulta por WhatsApp. Es parte de un trabajo con la dueña para mejorar su presencia en internet y conseguir más reservas.</p>
+        </article>
+        <article class="sitio revelar">
           <a class="ventana inclinar" href="https://villegascentromedicoodontologico.com/" target="_blank" rel="noopener" aria-label="Abrir el sitio de la Clínica Villegas">
             <span class="ventana-barra" aria-hidden="true"><i></i><i></i><i></i><span>villegascentromedicoodontologico.com</span></span>
             <img src="img/clinica-villegas-web.jpg" width="1280" height="614" loading="lazy" alt="Portada del sitio de la Clínica Villegas con los botones para pedir turno y urgencias.">
           </a>
           <h3>Sitio de la Clínica Villegas</h3>
           <p>Turnos y urgencias por WhatsApp, equipo, servicios y opiniones de Google. Comparte la identidad visual con el sistema de gestión.</p>
+        </article>
+        <article class="sitio revelar">
+          <a class="ventana inclinar" href="https://manjares-de-merlo.netlify.app/" target="_blank" rel="noopener" aria-label="Abrir la propuesta de tienda de Manjares de Merlo">
+            <span class="ventana-barra" aria-hidden="true"><i></i><i></i><i></i><span>manjares-de-merlo.netlify.app</span></span>
+            <img src="img/manjares-de-merlo.jpg" width="1280" height="614" loading="lazy" alt="Portada de la tienda de Manjares de Merlo con el alfajor premiado Black y el botón para comprar.">
+          </a>
+          <h3>Manjares de Merlo (propuesta)</h3>
+          <p>Propuesta de tienda online para una fábrica de alfajores multipremiada de la Villa: la línea de campeones, tienda con carrito, premios, locales y envíos a todo el país. Es una demo con precios de referencia.</p>
         </article>
         <article class="sitio revelar">
           <a class="ventana inclinar" href="https://odontologa-alejandravillegas.netlify.app/" target="_blank" rel="noopener" aria-label="Abrir el sitio de la odontóloga Alejandra Villegas">
@@ -252,6 +373,62 @@
           </a>
           <h3>Residencia Franciscus</h3>
           <p>Modalidades de residencia, servicios, galería y consultas por WhatsApp para una residencia de personas mayores en Merlo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="en-curso" aria-labelledby="en-curso-titulo">
+    <div class="ancho">
+      <div class="cabeza-seccion revelar">
+        <h2 id="en-curso-titulo">Sistemas que estoy armando</h2>
+        <p class="intro">Proyectos nuevos, en distintas etapas. Varios nacen de lo que ya funciona en la clínica y en Villegas Insumos.</p>
+      </div>
+
+      <div class="proyecto-destacado dos-columnas revelar">
+        <a class="ventana inclinar" href="https://marblanco-demo-sistema.netlify.app/" target="_blank" rel="noopener" aria-label="Abrir la demo del sistema de gestión para comercios">
+          <span class="ventana-barra" aria-hidden="true"><i></i><i></i><i></i><span>marblanco-demo-sistema.netlify.app</span></span>
+          <img src="img/sistema-comercios.jpg" width="1280" height="614" loading="lazy" alt="Inicio del sistema de gestión para comercios con las ventas de la semana, el stock y los productos más vendidos.">
+        </a>
+        <div class="texto-largo">
+          <p class="estado-proyecto">Demo online</p>
+          <h3>Sistema de gestión para comercios</h3>
+          <p>Ventas, caja, stock, clientes y una segunda pantalla hacia el cliente que muestra publicidad, productos y el clima mientras se cobra. Nace del sistema de Villegas Insumos y lo estoy convirtiendo en un producto para varios rubros: la primera versión es para una blanquería y colchonería de San Luis, con sus productos reales; la siguiente, para una casa de electricidad.</p>
+          <p>Pensado para instalarse en el local con Docker, con respaldo en la nube y actualizaciones sin perder datos.</p>
+          <p class="enlaces"><a href="https://marblanco-demo-sistema.netlify.app/" target="_blank" rel="noopener">Probar la demo</a></p>
+        </div>
+      </div>
+
+      <div class="proyectos revelar">
+        <article class="proyecto">
+          <p class="estado-proyecto">En uso</p>
+          <h3>Vigía Clínica</h3>
+          <p>Una app para ver en un solo lugar las cámaras de la clínica, Hikvision y EZVIZ. Corre en la mini PC de la clínica. Lo próximo: que avise sola cuando pasa algo.</p>
+        </article>
+        <article class="proyecto">
+          <p class="estado-proyecto">En desarrollo</p>
+          <h3>Reservas para hoteles</h3>
+          <p>Un sistema para que los hoteles de Merlo manejen sus reservas, más simple de usar que los que hay hoy. Lo estoy replanteando a partir de lo que de verdad necesitan los dueños.</p>
+        </article>
+        <article class="proyecto">
+          <p class="estado-proyecto">Prototipo</p>
+          <h3>Piedra en Merlo</h3>
+          <p>Alertas de tormenta y granizo para Merlo y el Valle del Conlara. Un script en Python calcula el riesgo de hoy y de mañana con el pronóstico y arma el aviso para WhatsApp; otro baja la foto satelital de la NASA y arma la placa para Instagram.</p>
+        </article>
+        <article class="proyecto">
+          <p class="estado-proyecto">En desarrollo</p>
+          <h3>Jarvis</h3>
+          <p>Un asistente para empezar el día: revisa los cambios de mis repositorios de GitHub y a las 9 me lee en voz alta un resumen de lo que se hizo en cada sistema.</p>
+        </article>
+        <article class="proyecto">
+          <p class="estado-proyecto">En desarrollo</p>
+          <h3>Turnos para instaladores</h3>
+          <p>Los clientes que escriben por WhatsApp para una instalación se agendan solos y dejan su ubicación. Primero la uso en mis instalaciones; después, la idea es ofrecerla a otros instaladores.</p>
+        </article>
+        <article class="proyecto">
+          <p class="estado-proyecto">En desarrollo</p>
+          <h3>Presupuesto personal en el celular</h3>
+          <p>Una app web para cargar gastos y ver deudas, pagos y el flujo de plata del mes desde el celular, en lugar de una planilla.</p>
         </article>
       </div>
     </div>
@@ -283,6 +460,7 @@
         <ul class="lista">
           <li><strong>Dictado clínico.</strong> El odontólogo aprieta el micrófono en la tablet, dice lo que hizo y Claude lo ordena en prestaciones, piezas, caras y próximo turno. No se guarda nada sin que lo revise.</li>
           <li><strong>Fichas en papel.</strong> Recepción sube el PDF del escáner y Claude lee cada ficha, la une con el paciente del sistema y marca lo dudoso para corroborar.</li>
+          <li><strong>Chat de turnos.</strong> En la página para pedir turno, el paciente pregunta y la IA le ofrece los horarios libres reales, según su obra social.</li>
           <li><strong>Asistente del tótem.</strong> Responde preguntas de los pacientes en la sala de espera.</li>
         </ul>
         <h3>Cómo uso la IA para programar</h3>
@@ -301,6 +479,8 @@
         <ul class="lista">
           <li>Diseño de una red Wi-Fi 6 para un complejo de diez cabañas, con dos Starlink Mini, access points de exterior y routers mesh.</li>
           <li>Equipos TP-Link Deco y Omada, cámaras Hikvision, Dahua y Ezviz, cerraduras inteligentes y lectores de huella.</li>
+          <li>Redes TP-Link Omada administradas desde la nube, con varios sitios en el mismo panel. En la clínica, redes separadas para trabajo, cámaras y dispositivos IoT.</li>
+          <li>Enchufes y relés inteligentes Smart Life (Tuya) controlados por software: <a href="#iot">los compresores y carteles de la clínica</a>.</li>
           <li>Alquiler de Starlink para eventos.</li>
           <li>Presupuestos que separan equipos, cableado, mano de obra y abono mensual, para que el cliente sepa qué paga.</li>
         </ul>
@@ -325,7 +505,7 @@
             <p class="periodo">2023 a hoy</p>
             <h3>Fundador y técnico en conectividad y seguridad</h3>
             <p class="lugar-trabajo">Villegas Insumos Tecnológicos, por cuenta propia</p>
-            <p>Instalaciones de Starlink, redes Wi-Fi, cámaras y alarmas.</p>
+            <p>Instalaciones de Starlink, redes Wi-Fi, cámaras y alarmas, y sitios y sistemas para negocios de la zona.</p>
           </li>
           <li>
             <p class="periodo">2015 a hoy</p>
@@ -367,9 +547,9 @@
         <h2 id="aptitudes-titulo">Con qué trabajo</h2>
       </div>
       <div class="aptitudes revelar">
-        <div><h3>Desarrollo web</h3><ul><li>React</li><li>TypeScript y JavaScript</li><li>Node.js</li><li>PostgreSQL</li><li>Tailwind CSS</li><li>HTML y CSS</li><li>Git y GitHub</li></ul></div>
+        <div><h3>Desarrollo web</h3><ul><li>React</li><li>TypeScript y JavaScript</li><li>Node.js</li><li>PostgreSQL</li><li>Tailwind CSS</li><li>HTML y CSS</li><li>Python</li><li>Git y GitHub</li></ul></div>
         <div><h3>Cloud e infraestructura</h3><ul><li>Docker y Docker Compose</li><li>DigitalOcean</li><li>Netlify</li><li>Cloudflare</li><li>Microsoft Azure (AZ-900, AI-901)</li></ul></div>
-        <div><h3>IA y automatización</h3><ul><li>API de Claude</li><li>Gemini API</li><li>n8n</li><li>Desarrollo asistido por IA</li></ul></div>
+        <div><h3>IA y automatización</h3><ul><li>API de Claude</li><li>Gemini API</li><li>n8n</li><li>Tuya Cloud API (IoT)</li><li>Desarrollo asistido por IA</li></ul></div>
         <div><h3>Redes y seguridad</h3><ul><li>Starlink</li><li>Wi-Fi mesh y TP-Link Omada</li><li>Cámaras IP</li><li>Alarmas y control de acceso</li></ul></div>
       </div>
     </div>

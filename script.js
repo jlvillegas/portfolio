@@ -26,7 +26,7 @@
 
   // ---- Tablero: ¿responden los sitios? ----
   // Una consulta "no-cors" no deja leer la respuesta, pero sí saber si el sitio contestó.
-  var filas = Array.prototype.slice.call(document.querySelectorAll(".servicio[data-url]"));
+  var filas = Array.prototype.slice.call(document.querySelectorAll(".servicio[data-url], .chip[data-url]"));
   var nota = document.getElementById("tablero-estado");
   if (!filas.length || !nota || typeof fetch !== "function") {
     if (nota) nota.textContent = "Sitios publicados en Netlify";
@@ -45,7 +45,7 @@
           var led = fila.querySelector(".led");
           var estado = fila.querySelector(".servicio-estado");
           if (led) led.setAttribute("data-estado", "ok");
-          if (estado) estado.textContent = "En línea";
+          if (estado) estado.textContent = fila.getAttribute("data-ok") || "En línea";
         }
         return ok;
       });

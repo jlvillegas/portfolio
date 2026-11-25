@@ -208,6 +208,13 @@ body::before {
 .contacto .boton.primario { background: #fff; color: #0b3b6b; }
 @keyframes mover-fondo { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
 
+/* Chips de sitios y tarjetas de proyectos en curso */
+.chip { backdrop-filter: blur(8px); transition: border-color .25s, background .25s, transform .25s; }
+.chip:hover { background: var(--accent-soft); transform: translateY(-2px); }
+.proyecto { backdrop-filter: blur(10px); transition: transform .3s, border-color .3s, box-shadow .3s; }
+.proyecto:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 20px 40px rgba(0,0,0,.3); }
+.estado-proyecto { border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); }
+
 /* ---------- Aparición al hacer scroll ---------- */
 .js .revelar { opacity: 0; transform: translateY(40px); transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1); }
 .js .revelar.visto { opacity: 1; transform: none; }
